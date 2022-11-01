@@ -4,7 +4,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_model():
     return SentenceTransformer('stsb-roberta-base-v2')
 
