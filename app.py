@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
-model = SentenceTransformer('stsb-roberta-base-v2')
+
+
+@st.cache
+def load_model():
+    return SentenceTransformer('stsb-roberta-base-v2')
+
+model=load_model()
 
 st.title('Task For Precily')
 
