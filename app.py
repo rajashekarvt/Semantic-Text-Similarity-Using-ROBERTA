@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer, util
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    return SentenceTransformer('stsb-roberta-base-v2')
+    return SentenceTransformer('stsb-roberta-large')
 
 model=load_model()
 
